@@ -1,0 +1,59 @@
+git init # inicijalizacija na local git repo
+
+touch README.md # kreiranje na README
+
+git add README # se dodava vo staged
+
+echo "# Antonio Nikoloski, 226059" >> README.md # pisuvame vo readme
+
+git commit -am "Initial commit" # go komitame README
+
+git add * # Dodavame 3 novi fajlovi
+
+git commit -am "Add starter code" # gi komitnuvame
+
+git remote add origin https://github.com/AntonioNDev/SI_2024_lab1_226059.git #incijalicija
+git push -u origin master
+
+git push --all origin # sihronizirame so oddaleceniot repo
+
+
+git checkout -b bug1, bug2 # krerirame 2 granki od master
+
+git commit -am " Fix wrong condition in filterOddLengthStrings" #resavame problemot vo prviot problem i go komitame
+
+git checkout bug2 # se prevrluvame na problem 2
+
+
+git commit -am " Fix wrong condition in filterOddLengthStrings" #go komitame problemot 2 
+
+git commit -am "Call method filterOddLengthStrings in main class" # pravime promena vo main klasata i potoa komitame od bug1 grankata
+
+git checkout bug2 # se prevrluvame na bug2 grankata
+
+git commit -am "Call method makeBigStringFrom in main class" # pravime promena i komitnuvame
+
+git push --all origin # sinhronizirame so oddaleceniot repo
+
+git checkout master # se prefrluvame vo grankata master
+
+git merge bug1 master # ja spojuvame grankata bug1 so master uspeshno bez problemi
+
+git push --all origin # pravime sinhronizacija so oddaleceniot repo pak
+
+git checkout bug2 # se prefrluvame vo bug2 grankata
+
+git rebase master # pravime REBASE vo MASTER no nastanuva konflikt poradi toa shto imame promena na ista linija.
+Reshavame taka shto ke ja izbrisime prvata linija kade se povikuva prviot problem, a ke ja ostavime vtorata
+potoa ke dodademe fajlot
+
+git add . 
+git rebase --continue
+
+I ke se reshi so fast-forward
+
+git push --all --force origin #sinhronizirame so oddaleceniot repo
+
+
+
+
